@@ -1,29 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Planner</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/javascript/script.js">
+    <script> src="https://cdn.tailwindcss.com"</script>
 </head>
+
 <body>
-    <header>
+    <header class="text-3xl font-bold underline">
         <h1>Recipe Finder</h1>
         <p>Pick the ingredients you want to use</p>
     </header>
     <main>
+        <Section class="food">
         <h2>Food</h2>
         <form action="search">
             <input type="text" placeholder="Search" name="search">
-            <button type="submit"></button>
+            </form>
+        <button type="submit">Search</button>
+    </Section>
+
+    <section class="drinks">
+        <h2>Drinks</h2>
+        <form action="search">
+            <input type="text" placeholder="Search" name="search">
         </form>
+        <button type="submit">Search</button>
+</section>
     </main>
     <aside>
         <h3>Recent Searches</h3>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <section class="recentbuttons">
+            <button type="submit">Search</button>
+            <button type="submit">Search</button>
+        </section>
+        <section class="recentbuttons2">
+            <button type="submit">Search</button>
+            <button type="submit">Search</button>
+        </section>
     </aside>
+    <footer>
+        <h3>Featured Recipes</h3>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </footer>
     
 </body>
 </html>
