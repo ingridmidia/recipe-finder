@@ -9,16 +9,14 @@ fetch(API_FoodURL)
         console.log(data);
         if (data.meals.length < 5 || data.meals.length < 4) {
             for (var i = 0; i < 3; i++) { // error if i is less than 5
-                console.log(data.meals[i].strMeal);
-                var results = document.getElementById("results");
+                var results = document.getElementById("food-results");
                 var result = document.createElement("button");
                 result.textContent = data.meals[i].strMeal;
                 results.appendChild(result);
             }
         } else {
             for (var i = 0; i < 5; i++) {
-                console.log(data.meals[i].strMeal);
-                var results = document.getElementById("results");
+                var results = document.getElementById("food-results");
                 var result = document.createElement("button");
                 result.textContent = data.meals[i].strMeal;
                 results.appendChild(result);
