@@ -3,6 +3,9 @@ var API_DrinkURL = "https://cors-anywhere.herokuapp.com/www.thecocktaildb.com/ap
 
 fetch(API_DrinkURL)
     .then(function (response) {
+        if (!response.ok) {// validates input
+            throw response.json();
+        }
         return response.json();
     })
     .then(function (data) {
@@ -23,4 +26,10 @@ fetch(API_DrinkURL)
                 results.appendChild(result);
             }
         }
+    })
+    .catch(function () {
+        var results = document.getElementById("drink-results");
+        var errorMessage = document.createElement("p");
+        errorMessage.textContent = "Sorry, no recipes found with this ingredient!"; // TODO: bigger font size and red
+        results.appendChild(errorMessage);
     })
