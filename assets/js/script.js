@@ -19,5 +19,3 @@ drinkSearch.addEventListener("submit", function (event) {
     var url = "./drink-results.html?q=" + userInputDrink;
     location.assign(url);
 });
-
-function saveSearchQuery(query) {}
