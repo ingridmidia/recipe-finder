@@ -3,6 +3,9 @@ var API_FoodURL = "https://cors-anywhere.herokuapp.com/www.themealdb.com/api/jso
 
 fetch(API_FoodURL)
     .then(function (response) {
+        if (!response.ok) {// validates input
+            throw response.json();
+        }
         return response.json();
     })
     .then(function (data) {
@@ -22,4 +25,10 @@ fetch(API_FoodURL)
                 results.appendChild(result);
             }
         }
+    })
+    .catch(function () {
+        var results = document.getElementById("food-results");
+        var errorMessage = document.createElement("p");
+        errorMessage.textContent = "Sorry, no recipes found with this ingredient!"; // TODO: bigger font size and red
+        results.appendChild(errorMessage);
     })
