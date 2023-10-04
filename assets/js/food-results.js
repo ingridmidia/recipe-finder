@@ -16,16 +16,48 @@ fetch(API_FoodURL)
                 var result = document.createElement("button");
                 result.textContent = data.meals[i].strMeal;
                 results.appendChild(result);
+
+                result.addEventListener("click", function (event) {
+                    var recipeName = event.target.innerText;
+                    console.log(recipeName);
+
+                    var API_RecipeURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=" + recipeName;
+                    console.log(API_RecipeURL);
+
+                    fetch(API_RecipeURL)
+                        .then(function (response) {
+                            if (!response.ok) {// validates input
+                                throw response.json();
+                            }
+                            return response.json();
+                        })
+                    .then(function (data) {
+                        console.log(data);
+                        
+                        var recipeCardEl = document.getElementById("recipeCard");
+                        var mealTitleEl = document.createElement("ul")
+                        
+                        mealTitleEl.textContent = data.meals[0].strMeal;
+                        
+                        
+                        recipeCardEl.appendChild(mealTitleEl);
+                    })
+                })
+            }}
+        else {
+                        for(var i = 0; i< 5; i++) {
+                    var results = document.getElementById("food-results");
+                    var result = document.createElement("button");
+                    result.textContent = data.meals[i].strMeal;
+                    results.appendChild(result);
+
+                    result.addEventListener("click", function (event) {
+                        var recipeName = event.target.innerText;
+                        console.log(recipeName);
+                    })
+                }
             }
-        } else {
-            for (var i = 0; i < 5; i++) {
-                var results = document.getElementById("food-results");
-                var result = document.createElement("button");
-                result.textContent = data.meals[i].strMeal;
-                results.appendChild(result);
-            }
-        }
-    })
+        })
     .catch(function () {
         var results = document.getElementById("food-results");
         var errorMessage = document.createElement("p");
