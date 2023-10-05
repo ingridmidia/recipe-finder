@@ -1,6 +1,6 @@
 var alcohol = document.location.search.split("=")[1];
 var API_DrinkURL = "https://cors-anywhere.herokuapp.com/www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + alcohol;
-var ingredientsArray = [];
+
 
 fetch(API_DrinkURL)
     .then(function (response) {
@@ -10,7 +10,6 @@ fetch(API_DrinkURL)
         return response.json();
     })
     .then(function (data) {
-        console.log(data);
         if (data.drinks.length < 5) {
             data = data.drinks;
             showRecipes(data);
@@ -37,10 +36,8 @@ function showRecipes(data) {
 
         result.addEventListener("click", function (event) {
             var recipeName = event.target.innerText;
-            console.log(recipeName);
 
             var API_RecipeURL = "https://cors-anywhere.herokuapp.com/www.thecocktaildb.com/api/json/v1/1/search.php?s=" + recipeName;
-            console.log(API_RecipeURL);
 
             fetch(API_RecipeURL)
                 .then(function (response) {
@@ -50,11 +47,10 @@ function showRecipes(data) {
                     return response.json();
                 })
                 .then(function (data) {
-                    console.log(data);
+                    var ingredientsArray = [];
                     for (var i = 1; i <= 15; i++) {
                         var ingredientKey = `strIngredient${i}`;
                         var measurementKey = `strMeasure${i}`;
-                        console.log(data.drinks[0][ingredientKey]);
                         if (data.drinks[0][ingredientKey] && data.drinks[0][ingredientKey].trim() !== "") {
                             if (data.drinks[0][measurementKey] && data.drinks[0][measurementKey].trim() !== "") {
                                 ingredientsArray.push({ ingredient: data.drinks[0][ingredientKey], measurement: data.drinks[0][measurementKey] })
