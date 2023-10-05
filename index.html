@@ -21,6 +21,7 @@
             <h2>Food</h2>
             <form id="foodSearch" action="search">
                 <input id="userInputFood" type="text" placeholder="Search" name="search">
+                <span id="foodError" class="error-message"></span>
                 <button type="submit">Search</button>
             </form>
         </Section>
@@ -30,27 +31,22 @@
             <h2>Drinks</h2>
             <form id="drinkSearch" action="search">
                 <input id="userInputDrink" type="text" placeholder="Search" name="search">
+                <span id="drinkError" class="error-message"></span>
                 <button type="submit">Search</button>
             </form>
         </section>
     </main>
     <aside>
-        <h3>Recent Searches</h3>
-        <section class="recentbuttons">
-            <button type="submit">Search</button>
-            <button type="submit">Search</button>
+        <h3>Recent Food Searches</h3>
+        <section class="recentFoodButtons">
+            <!-- Recent food search buttons will appear here -->
         </section>
-        <section class="recentbuttons2">
-            <button type="submit">Search</button>
-            <button type="submit">Search</button>
+        <h3>Recent Drink Searches</h3>
+        <section class="recentDrinkButtons">
+            <!-- Recent drink search buttons will appear here -->
         </section>
     </aside>
     <footer>
-        <h3>Featured Recipes</h3>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
     </footer>
     <script src="./assets/js/script.js"></script>
 </body>
