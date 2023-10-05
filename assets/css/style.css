@@ -42,3 +42,15 @@ section button{
     
 }
 
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background: #cfc4d1;
+}
+
+div>img{
+    border-radius: 10px;
+}
