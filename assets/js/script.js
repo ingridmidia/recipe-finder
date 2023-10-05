@@ -73,6 +73,7 @@ function displayRecentSearchesByType(type, selector) {
     // Create and append a button for each recent search
     recentSearches.forEach(function(searchTerm) {
         var btn = document.createElement("button");
+        btn.classList.add("is-dark", "button", "is-small");
         btn.innerText = searchTerm;
         btn.addEventListener("click", function() {
             replaySearch(searchTerm, type);
