@@ -28,6 +28,7 @@ function showRecipes(data) {
     for (var i = 0; i < data.length; i++) {
         var results = document.getElementById("food-results");
         var result = document.createElement("button");
+        result.classList.add("is-dark", "button", "is-small", "is-rounded");
         result.textContent = data[i].strMeal;
         results.appendChild(result);
 
