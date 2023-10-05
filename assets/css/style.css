@@ -13,10 +13,9 @@ main{
 }
 
 .food, .drinks{
-    flex: wrap;
     display: flex;
     border: dashed 1px black;
-    width: 50%;
+    width: 25%;
     flex-direction: column;
     align-items: center;
 }
@@ -44,3 +43,15 @@ section button{
     
 }
 
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background: #cfc4d1;
+}
+
+div>img{
+    border-radius: 10px;
+}
