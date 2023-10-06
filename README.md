@@ -20,3 +20,5 @@ https://lizfischstix.github.io/mealplannerapp/
 ./assets/css/reset.css
 ./assets/css/style.css  
 https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css
+## Instructions
+When first joining the web application start by getting access to the api at https://cors-anywhere.herokuapp.com. You can also request access through the developer tools in console. After that task is completed you can use the web application to enter in a ingredient in the search bar for a foor or a drink ingredient in the drink section to search your favorite recipes! Click on recipes after be redirected and start your meal planning!
