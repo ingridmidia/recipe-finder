@@ -1,3 +1,10 @@
+body{
+    background: #f8ecfa;
+    margin: 0;
+    padding: 4rem;
+    min-height: 100vh;
+}
+
 header{
     display: flex;
     flex: wrap;
@@ -7,12 +14,8 @@ header{
     align-items: center;
     flex-direction: column;
 }
-main{
-    flex: wrap;
-    display: flex;
-}
 
-.food, .drinks{
+/* .food, .drinks{
     display: flex;
     border: dashed 1px black;
     width: 25%;
@@ -32,24 +35,18 @@ main button{
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-    
-    
-
 }
+
 section button{
     width: 25%;
     height: 20px;
     margin: 20px;
     
-}
+} */
 
 .banner {
     display: flex;
     justify-content: center;
-}
-
-body{
-    background: #cfc4d1;
 }
 
 div>img{
