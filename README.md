@@ -2,6 +2,8 @@
 The meal-planner for busy coding bootcamp students.
 ## Live Link
 https://ingridmidia.github.io/recipe-finder/
+
+![screenshot](./assets/whats-for-dinner.png)
 ## User Story
 As a busy bootcamp student with limited time to plan my meals, I need quick and easy way to look up food recipies.
 ## Description:
