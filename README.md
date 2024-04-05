@@ -11,10 +11,6 @@ Jackson Neuman - https://github.com/jneums81
 Chris Kirkley - https://github.com/Peaky00
 ## Live Link
 https://lizfischstix.github.io/mealplannerapp/
-## Screenshot
-![1st Page](image.png)
-![2nd Page Food Results](image-1.png)
-![3rd Page Drink Results](image-2.png)
 ## Files/Links/CDN Required
 ./assets/js/script.js
 ./assets/css/reset.css

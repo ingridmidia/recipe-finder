@@ -1,7 +1,7 @@
 body{
     background: #f8ecfa;
     margin: 0;
-    padding: 4rem;
+    padding: 0rem 4rem;
     min-height: 100vh;
 }
 
@@ -13,6 +13,19 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+div>img{
+    border-radius: 10px;
+}
+
+.goback {
+    padding-top: 5rem;
 }
 
 /* .food, .drinks{
@@ -43,12 +56,3 @@ section button{
     margin: 20px;
     
 } */
-
-.banner {
-    display: flex;
-    justify-content: center;
-}
-
-div>img{
-    border-radius: 10px;
-}
