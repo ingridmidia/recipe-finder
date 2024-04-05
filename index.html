@@ -16,69 +16,88 @@
     <div class="banner">
       <img
         src="./assets/Recipe Finder (Billboard (Landscape)).png"
-        alt="bannder reading what's for dinner the recipe finder for busy coding bootcamp students."
+        alt="banner reading what's for dinner the recipe finder for busy coding bootcamp students."
       />
     </div>
 
-    <header class="text-3xl font-bold underline p-4">
-      <p>
-        Enter an ingredient you'd like to use in the appropreate seach bar;
-        then, click search for a list of recipies with that ingredient.
-      </p>
-    </header>
-
-<main class="container">
-  <div class="columns is-centered is-multiline">
-    <div class="column is-12-mobile is-10-tablet is-5-desktop">
-      <section class="food box">
-        <h2 class="title has-text-centered">Food</h2>
-        <form id="foodSearch" action="search">
-          <div class="field">
-            <div class="control">
-              <input id="userInputFood" class="input" type="text" placeholder="Search" name="search">
+    <main class="container pt-6">
+      <div class="columns is-centered is-multiline">
+        <div class="column is-12-mobile is-10-tablet is-5-desktop">
+          <section class="food box">
+            <h2 class="title has-text-centered">Food</h2>
+            <form id="foodSearch" action="search">
+              <div class="field">
+                <div class="control">
+                  <input
+                    id="userInputFood"
+                    class="input"
+                    type="text"
+                    placeholder="Search"
+                    name="search"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button
+                    type="submit"
+                    class="button is-dark is-fullwidth is-rounded"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+              <p id="foodError" class="help is-danger"></p>
+            </form>
+            <div id="food-search-history" class="is-hidden">
+              <h3 class="p-4 subtitle has-text-centered">
+                Recent Food Searches
+              </h3>
+              <section class="recentFoodButtons">
+                <!-- Recent food search buttons will appear here -->
+              </section>
             </div>
-          </div>
-          <div class="field">
-            <div class="control">
-              <button type="submit" class="button is-dark is-fullwidth">Search</button>
+          </section>
+        </div>
+        <div class="column is-12-mobile is-10-tablet is-5-desktop">
+          <section class="drinks box">
+            <h2 class="title has-text-centered">Drinks</h2>
+            <form id="drinkSearch" action="search">
+              <div class="field">
+                <div class="control">
+                  <input
+                    id="userInputDrink"
+                    class="input"
+                    type="text"
+                    placeholder="Search"
+                    name="search"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button
+                    type="submit"
+                    class="button is-dark is-fullwidth is-rounded"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+              <p id="drinkError" class="help is-danger"></p>
+            </form>
+            <div id="drink-search-history" class="is-hidden">
+              <h3 class="p-4 subtitle has-text-centered">
+                Recent Drink Searches
+              </h3>
+              <section class="recentDrinkButtons">
+                <!-- Recent drink search buttons will appear here -->
+              </section>
             </div>
-          </div>
-          <p id="foodError" class="help is-danger"></p>
-        </form>
-      </section>
-    </div>
-    <div class="column is-12-mobile is-10-tablet is-5-desktop">
-      <section class="drinks box">
-        <h2 class="title has-text-centered">Drinks</h2>
-        <form id="drinkSearch" action="search">
-          <div class="field">
-            <div class="control">
-              <input id="userInputDrink" class="input" type="text" placeholder="Search" name="search">
-            </div>
-          </div>
-          <div class="field">
-            <div class="control">
-              <button type="submit" class="button is-dark is-fullwidth is-rounded">Search</button>
-            </div>
-          </div>
-          <p id="drinkError" class="help is-danger"></p>
-        </form>
-      </section>
-    </div>
-  </div>
-</main>
-
-
-    <aside>
-      <h3>Recent Food Searches</h3>
-      <section class="recentFoodButtons">
-        <!-- Recent food search buttons will appear here -->
-      </section>
-      <h3>Recent Drink Searches</h3>
-      <section class="recentDrinkButtons">
-        <!-- Recent drink search buttons will appear here -->
-      </section>
-    </aside>
+          </section>
+        </div>
+      </div>
+    </main>
 
     <script src="./assets/js/script.js"></script>
   </body>
