@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Results | Meal Planner</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
-<body>
-    <header>Recipe Finder</header>
-    <main>
-        <a href="index.html" class="button is-dark is-small is-rounded">Go Back</a>
-        <section id="drink-results">
-            
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="banner">
+      <img
+        src="./assets/Recipe Finder (Billboard (Landscape)).png"
+        alt="bannder reading what's for dinner the recipe finder for busy coding bootcamp students."
+      />
+    </div>
+
+    <main class="goback">
+      <div class="box">
+        <div class="has-text-centered">
+          <a href="index.html" class="button is-dark is-rounded">Go Back</a>
+        </div>
+        <section id="not-found" class="is-hidden">
+          <div class="content has-text-centered">
+            <p
+              id="error-message"
+              class="has-text-danger is-size-4 m-4 has-text-weight-bold"
+            >
+              Sorry, no recipes found with this ingredient!
+            </p>
+          </div>
         </section>
+        <section id="drink-results"></section>
         <div id="recipeCard"></div>
+      </div>
     </main>
 
     <script src="./assets/js/drink-results.js"></script>
-</body>
+  </body>
 </html>
