@@ -1,5 +1,5 @@
 var ingredient = document.location.search.split("=")[1];
-var API_FoodURL = "https://cors-anywhere.herokuapp.com/www.themealdb.com/api/json/v1/1/filter.php?i=" + ingredient;
+var API_FoodURL = "https://themealdb.com/api/json/v1/1/filter.php?i=" + ingredient;
 
 fetch(API_FoodURL)
     .then(function (response) {
@@ -18,24 +18,24 @@ fetch(API_FoodURL)
         }
     })
     .catch(function () {
-        var results = document.getElementById("food-results");
-        var errorMessage = document.createElement("p");
-        errorMessage.textContent = "Sorry, no recipes found with this ingredient!"; // TODO: bigger font size and red
-        results.appendChild(errorMessage);
+        var results = document.getElementById("not-found");
+         results.classList.remove("is-hidden");
+        results.classList.add("is-visible");
     })
 
 function showRecipes(data) {
     for (var i = 0; i < data.length; i++) {
         var results = document.getElementById("food-results");
+        results.classList.add("is-flex", "is-flex-wrap-wrap", "is-justify-content-center");
         var result = document.createElement("button");
-        result.classList.add("is-dark", "button", "is-small", "is-rounded");
+        result.classList.add("is-dark", "button", "is-rounded", "mr-2", "mt-4");
         result.textContent = data[i].strMeal;
         results.appendChild(result);
 
         result.addEventListener("click", function (event) {
             var recipeName = event.target.innerText;
 
-            var API_RecipeURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=" + recipeName;
+            var API_RecipeURL = "https://themealdb.com/api/json/v1/1/search.php?s=" + recipeName;
 
             fetch(API_RecipeURL)
                 .then(function (response) {

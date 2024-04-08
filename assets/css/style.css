@@ -1,29 +1,35 @@
-body{
-    background: #f8ecfa;
-    margin: 0;
-    padding: 0rem 2rem;
-    min-height: 100vh;
+body {
+  background: #f8ecfa;
+  margin: 0;
+  padding: 0rem 2rem;
+  min-height: 100vh;
 }
 
-header{
-    display: flex;
-    flex: wrap;
-    flex-wrap: nowrap;
-    align-content: flex-start;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+header {
+  display: flex;
+  flex: wrap;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.banner{
-    display: flex;
-    justify-content: center;
+.banner {
+  display: flex;
+  justify-content: center;
 }
 
-div>img{
-    border-radius: 10px;
+div > img {
+  border-radius: 10px;
 }
 
-.goback{
-    padding-top: 5rem;
+.goback {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.recentFoodButtons button,
+.recentDrinkButtons button {
+  margin-right: 0.5rem;
 }

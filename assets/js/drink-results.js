@@ -1,5 +1,5 @@
 var alcohol = document.location.search.split("=")[1];
-var API_DrinkURL = "https://cors-anywhere.herokuapp.com/www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + alcohol;
+var API_DrinkURL = "https://thecocktaildb.com/api/json/v1/1/filter.php?i=" + alcohol;
 
 
 fetch(API_DrinkURL)
@@ -37,7 +37,7 @@ function showRecipes(data) {
         result.addEventListener("click", function (event) {
             var recipeName = event.target.innerText;
 
-            var API_RecipeURL = "https://cors-anywhere.herokuapp.com/www.thecocktaildb.com/api/json/v1/1/search.php?s=" + recipeName;
+            var API_RecipeURL = "https://thecocktaildb.com/api/json/v1/1/search.php?s=" + recipeName;
 
             fetch(API_RecipeURL)
                 .then(function (response) {
