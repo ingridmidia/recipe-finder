@@ -18,6 +18,7 @@ fetch(API_DrinkURL)
       data = data.drinks.slice(0, 5);
       showRecipes(data);
     }
+    storeRecentSearch(alcohol);
   })
   .catch(function () {
     var results = document.getElementById("not-found");
@@ -120,4 +121,26 @@ function showRecipes(data) {
         });
     });
   }
+}
+
+function storeRecentSearch(searchTerm) {
+  var storageKey = "recentDrinkSearches";
+  var recentSearches = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+  // Remove searchTerm if it already exists in recentSearches to avoid duplicates
+  var existingIndex = recentSearches.indexOf(searchTerm);
+  if (existingIndex !== -1) {
+    recentSearches.splice(existingIndex, 1);
+  }
+
+  // Add the new search term to the start of the array
+  recentSearches.unshift(searchTerm);
+
+  // Limit the number of recent searches to 5 (or any other number you prefer)
+  if (recentSearches.length > 5) {
+    recentSearches.pop();
+  }
+
+  // Update local storage with the modified recent searches
+  localStorage.setItem(storageKey, JSON.stringify(recentSearches));
 }

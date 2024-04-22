@@ -24,8 +24,6 @@ function handleSearch(inputId, redirectUrl, type) {
   } else {
     errorElement.style.display = "none"; // Hide the error message
   }
-  // Store the userInput in local storage's recent searches
-  storeRecentSearch(userInput, type);
 
   // Update the displayed recent searches immediately
   displayRecentSearches();
@@ -33,29 +31,6 @@ function handleSearch(inputId, redirectUrl, type) {
   // Redirect to the results page
   var url = redirectUrl + "?q=" + userInput;
   location.assign(url);
-}
-
-function storeRecentSearch(searchTerm, type) {
-  var storageKey =
-    type === "food" ? "recentFoodSearches" : "recentDrinkSearches";
-  var recentSearches = JSON.parse(localStorage.getItem(storageKey)) || [];
-
-  // Remove searchTerm if it already exists in recentSearches to avoid duplicates
-  var existingIndex = recentSearches.indexOf(searchTerm);
-  if (existingIndex !== -1) {
-    recentSearches.splice(existingIndex, 1);
-  }
-
-  // Add the new search term to the start of the array
-  recentSearches.unshift(searchTerm);
-
-  // Limit the number of recent searches to 5 (or any other number you prefer)
-  if (recentSearches.length > 5) {
-    recentSearches.pop();
-  }
-
-  // Update local storage with the modified recent searches
-  localStorage.setItem(storageKey, JSON.stringify(recentSearches));
 }
 
 function displayRecentSearches() {
